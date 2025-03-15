@@ -3,7 +3,6 @@ import logging
 import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import InputFile
-from aiogram import executor
 from dotenv import load_dotenv
 
 # Загрузка переменных окружения
