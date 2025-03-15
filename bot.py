@@ -17,15 +17,16 @@ dp = Dispatcher()
 # Логирование
 logging.basicConfig(level=logging.INFO)
 
-# Обработчик сообщений
+# Обработчик команды /start
 @dp.message(Command("start"))
 async def start_handler(message: Message):
     await message.answer("Бот запущен и готов к работе!")
 
+# Обработчик сообщений
 @dp.message()
 async def monitor_messages(message: Message):
     text = message.text.lower()
-    
+
     # Ключевые слова для фиксации согласования
     keywords = ["прошу согласовать", "прошу принять решение", "прошу дать добро", "необходимо согласование"]
     
